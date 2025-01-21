@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: product
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: post
+    password: post456
+
+  jpa:
+   hibernate:
+    ddl-auto: update
