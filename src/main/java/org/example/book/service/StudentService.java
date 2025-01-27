@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface StudentService {
     void addStudent(StudentRequestDTO dto);
+    void deleteStudent(Long id);
     List<StudentResponseDTO> getStudents();
     StudentResponseDTO getStudent(Long id);
     List<StudentResponseDTO> getStudentsByBalanceRange(Integer minbalance, Integer maxbalance);

@@ -29,6 +29,11 @@ public class StudentImpl implements StudentService {
     }
 
     @Override
+    public void deleteStudent(Long id) {
+        studentRepository.deleteById(id);
+    }
+
+    @Override
     public List<StudentResponseDTO> getStudents() {
      return studentMapper.entityListToDtoList(studentRepository.findAll());
     }

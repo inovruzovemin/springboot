@@ -15,4 +15,6 @@ public interface StudentRepository extends JpaRepository<StudentEntity,Long> {
     List<StudentEntity> findByBalanceBetween(@Param("minbalance") Integer minbalance, @Param("maxbalance") Integer maxbalance);
     @Query(value ="select * from student where first_name = :name",nativeQuery = true)
     List<StudentEntity> findByName(@Param ("name") String name);
+
+    List<StudentEntity> id(Long id);
 }

@@ -37,6 +37,13 @@ public class StudentController {
         return studentService.getStudentsByBalanceRange(minbalance,maxbalance);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteStudent (@PathVariable Long id){
+
+        studentService.deleteStudent(id);
+    }
+
+
     @GetMapping("name")
     public List<StudentResponseDTO> getStudentsByName(
             @RequestParam String name){
