@@ -13,6 +13,6 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<StudentEntity,Long> {
     @Query(value = "select * from student where active_balance between :minbalance and :maxbalance", nativeQuery = true)
     List<StudentEntity> findByBalanceBetween(@Param("minbalance") Integer minbalance, @Param("maxbalance") Integer maxbalance);
-    @Query(value ="select * from student where first_name = name",nativeQuery = true)
+    @Query(value ="select * from student where first_name = :name",nativeQuery = true)
     List<StudentEntity> findByName(@Param ("name") String name);
 }

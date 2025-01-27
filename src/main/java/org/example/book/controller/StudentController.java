@@ -37,7 +37,7 @@ public class StudentController {
         return studentService.getStudentsByBalanceRange(minbalance,maxbalance);
     }
 
-    @GetMapping()
+    @GetMapping("name")
     public List<StudentResponseDTO> getStudentsByName(
             @RequestParam String name){
         return studentService.getStudentsByName(name);
