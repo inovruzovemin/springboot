@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import org.example.book.utill.enums.Gender;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.yaml.snakeyaml.events.Event;
 
 import java.time.LocalDate;
 
@@ -35,6 +34,6 @@ public class StudentEntity {
     @UpdateTimestamp
     private LocalDate updateDate;
     private Integer active_balance;
-
+    private Long subject_id;
 
 }

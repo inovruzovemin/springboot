@@ -57,4 +57,24 @@ public class StudentImpl implements StudentService {
     public List<StudentResponseDTO> getStudentsByName(String name) {
         return studentMapper.entityListToDtoList(studentRepository.findByName(name));
     }
+
+    @Override
+    public List<StudentResponseDTO> getStudentsByNameComponent(String namec) {
+        return studentMapper.entityListToDtoList(studentRepository.findByNameComponent(namec));
+    }
+
+    @Override
+    public Long getStudentsCount() {
+        return studentRepository.count();
+    }
+
+    @Override
+    public StudentResponseDTO getStudentByMaxBalance() {
+        return studentMapper.entityToDto(studentRepository.findTopByActive_balance());
+    }
+
+    @Override
+    public List<StudentResponseDTO> getLastStudents() {
+        return null;
+    }
 }

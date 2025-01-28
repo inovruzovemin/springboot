@@ -1,7 +1,6 @@
 package org.example.book.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.book.dao.repository.StudentRepository;
 import org.example.book.dto.StudentRequestDTO;
 import org.example.book.dto.StudentResponseDTO;
 import org.example.book.service.StudentService;
@@ -29,13 +28,34 @@ public class StudentController {
         return studentService.getStudent(id);
     }
 
-
+//TASK1
     @GetMapping("price-range")
     public List<StudentResponseDTO> getStudentsByPriceRange (
             @RequestParam Integer minbalance,
             @RequestParam Integer maxbalance){
         return studentService.getStudentsByBalanceRange(minbalance,maxbalance);
     }
+//TASK2
+    @GetMapping("nc")
+    public List<StudentResponseDTO> getStudentsByNameComponent (
+            @RequestParam String namec){
+        return studentService.getStudentsByNameComponent(namec);
+    }
+//TASK3
+    @GetMapping("count")
+    public String count(){
+        return "Count: " + studentService.getStudentsCount();
+    }
+//TASK4
+    @GetMapping("max")
+    public StudentResponseDTO getStudentByMaxBalance(){
+        return studentService.getStudentByMaxBalance();
+    }
+//TASK5
+@GetMapping("son")
+public List<StudentResponseDTO> getLastStudents(){
+    return studentService.getLastStudents();
+}
 
     @DeleteMapping("/{id}")
     public void deleteStudent (@PathVariable Long id){

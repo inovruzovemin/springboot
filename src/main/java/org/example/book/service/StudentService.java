@@ -12,4 +12,9 @@ public interface StudentService {
     StudentResponseDTO getStudent(Long id);
     List<StudentResponseDTO> getStudentsByBalanceRange(Integer minbalance, Integer maxbalance);
     List<StudentResponseDTO> getStudentsByName(String name);
+    List<StudentResponseDTO> getStudentsByNameComponent(String namec);
+    Long getStudentsCount ();
+    StudentResponseDTO getStudentByMaxBalance();
+    List<StudentResponseDTO> getLastStudents();
+
 }

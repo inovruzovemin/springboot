@@ -2,6 +2,7 @@ package org.example.book.mapper;
 
 import org.example.book.dao.entity.StudentEntity;
 import org.example.book.dao.repository.StudentRepository;
+import org.example.book.dto.JoinDTO;
 import org.example.book.dto.StudentResponseDTO;
 import org.springframework.stereotype.Component;
 
@@ -38,5 +39,10 @@ public class StudentMapper {
                 .build();
     }
 
+    public List<JoinDTO> entityToJoinDto(List<StudentEntity> entities){
+        List<JoinDTO> dtos = new ArrayList<>()
+                for(StudentEntity e : entities)
+                    var dto 
+    }
 
 }
