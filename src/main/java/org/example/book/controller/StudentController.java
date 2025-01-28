@@ -1,6 +1,7 @@
 package org.example.book.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.example.book.dto.JoinDTO;
 import org.example.book.dto.StudentRequestDTO;
 import org.example.book.dto.StudentResponseDTO;
 import org.example.book.service.StudentService;
@@ -63,6 +64,10 @@ public List<StudentResponseDTO> getLastStudents(){
         studentService.deleteStudent(id);
     }
 
+    @GetMapping("cat")
+    public List<JoinDTO> getStudentNameIdAndSubjectName() {
+        return studentService.getStudentNameIdAndSubjectName();
+    }
 
     @GetMapping("name")
     public List<StudentResponseDTO> getStudentsByName(

@@ -1,5 +1,6 @@
 package org.example.book.service;
 
+import org.example.book.dto.JoinDTO;
 import org.example.book.dto.StudentRequestDTO;
 import org.example.book.dto.StudentResponseDTO;
 
@@ -16,5 +17,5 @@ public interface StudentService {
     Long getStudentsCount ();
     StudentResponseDTO getStudentByMaxBalance();
     List<StudentResponseDTO> getLastStudents();
-
+    List<JoinDTO> getStudentNameIdAndSubjectName();
 }

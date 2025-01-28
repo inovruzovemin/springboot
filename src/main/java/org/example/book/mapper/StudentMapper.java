@@ -39,10 +39,4 @@ public class StudentMapper {
                 .build();
     }
 
-    public List<JoinDTO> entityToJoinDto(List<StudentEntity> entities){
-        List<JoinDTO> dtos = new ArrayList<>()
-                for(StudentEntity e : entities)
-                    var dto 
-    }
-
 }

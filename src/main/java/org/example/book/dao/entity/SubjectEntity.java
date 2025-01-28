@@ -17,5 +17,5 @@ public class SubjectEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Long student_id;
+    private Long studentId;
 }

@@ -3,6 +3,7 @@ package org.example.book.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.example.book.dao.entity.StudentEntity;
 import org.example.book.dao.repository.StudentRepository;
+import org.example.book.dto.JoinDTO;
 import org.example.book.dto.StudentRequestDTO;
 import org.example.book.dto.StudentResponseDTO;
 import org.example.book.mapper.StudentMapper;
@@ -76,5 +77,10 @@ public class StudentImpl implements StudentService {
     @Override
     public List<StudentResponseDTO> getLastStudents() {
         return null;
+    }
+
+    @Override
+    public List<JoinDTO> getStudentNameIdAndSubjectName() {
+        return studentRepository.studentNameIdAndSubjectName();
     }
 }
